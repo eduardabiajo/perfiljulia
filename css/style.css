@@ -108,7 +108,7 @@ body {
 .menu-mobile .menu-link {
     flex-direction: column;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: .5rem 1rem;
 }
 
 .menu-link.active .menu-icon,
@@ -125,4 +125,38 @@ body {
 
 .menu-icon {
     font-size: 1.5rem;
+}
+
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.header-nav {
+    display: none;
+}
+
+.menu-principal {
+    gap: 1rem;
+}
+
+
+/*--------------------------------------------------------*/
+
+
+/* CSS RESPONSIVO*/
+@media (min-width: 768px) {
+    .header {
+        position: fixed;
+        border-bottom: 3px solid var(--primary-border-color);
+        padding: 1rem 6rem;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+    }
 }
