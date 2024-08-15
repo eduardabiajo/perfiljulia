@@ -8,7 +8,7 @@
 /* TEMA DARK */
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;  /*cor principal Textos*/
-    --primary-bg-color: #171511;  /*cor principal Fundo*/ 
+    --primary-bg-color: #121117;  /*cor principal Fundo*/ 
     /* bg = background == cor do Fundo */
     --secondary-bg-color: #28292E; /*cor secundária do fundo*/
     --primary-border-color: #28292E;
@@ -58,12 +58,12 @@ i {
 
 .header {
     display: flex;
-    flex-flow: row wrap; /*coloca o conteúdo em linha e permite a quebra de linha*/
+    flex-flow: row; /*coloca o conteúdo em linha e permite a quebra de linha*/
     justify-content: space-between; /*os itens dentro do container flexivel serão distribuidos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles*/
     width: 100%;
     align-items: center;
     padding: 0.5rem 1rem; /*primeiro valor: top e bottom. segundo valor: left e right.*/
-    z-index: 2; /*sobreposição*/
+    z-index: 2s; /*sobreposição*/
 }
 
 body {
