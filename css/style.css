@@ -73,6 +73,7 @@ body {
 }
 
 .header-logo .logo {
+    position: relative;
     width: 9rem;
     height: 2.50rem; 
     right: 30px;
@@ -166,3 +167,8 @@ html[data-theme='dark'] .logo {
         display: flex;
     }
 }
+
+/*-----------------------------------------------------*/
+
+/* MAIN */
+
