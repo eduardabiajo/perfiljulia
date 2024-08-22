@@ -74,9 +74,9 @@ body {
 
 .header-logo .logo {
     position: relative;
-    width: 9rem;
-    height: 2.50rem; 
-    right: 30px;
+    width: 6.40rem;
+    height: 1.50rem; 
+    right: 10px;
 }
 
 html[data-theme='dark'] .logo {
@@ -147,7 +147,56 @@ html[data-theme='dark'] .logo {
     gap: 1rem;
 }
 
+/* MAIN */
 
+.menu-social {
+    gap: 1rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.62rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--secondary-border-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    transition: ease-in-out .3s;
+}
+
+.btn-primary {
+    border: 1px solid var(--secondary-border-color);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
+}
+
+.btn span, .btn i {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.btn-primary span {
+    color: var(--primary-color);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 /*--------------------------------------------------------*/
 
 
@@ -167,8 +216,4 @@ html[data-theme='dark'] .logo {
         display: flex;
     }
 }
-
-/*-----------------------------------------------------*/
-
-/* MAIN */
 
