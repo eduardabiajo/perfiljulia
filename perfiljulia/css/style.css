@@ -1,0 +1,229 @@
+/*  Google Fonts */  /* Atalho para Comentar Shift + ALT + A  */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+/* Variaveis das Cores */
+/* TEMA DARK */
+:root, :root[data-theme='dark'] {
+    --primary-color: #f0f0f0;  /*cor principal Textos*/
+    --primary-bg-color: #121117;  /*cor principal Fundo*/ 
+    /* bg = background == cor do Fundo */
+    --secondary-bg-color: #28292E; /*cor secundária do fundo*/
+    --primary-border-color: #28292E;
+    --secondary-border-color: #56575A;
+    --title-color: #F0F0F0;
+    --link-color: #8f8f8f;
+    --link-hover: #f0f0f0;
+    --icon-color: #c7c8c9;
+
+}
+
+/* TEMA LIGHT */
+:root[data-theme='light'] {
+    --primary-color: #0d0c09; /* cor principal textos */
+    --primary-bg-color: #f0f2f5;
+    --secondary-bg-color: #c7c8c9;
+    --primary-border-color: #c7c8c9;
+    --secondary-border-color:#9a9a9c;
+    --title-color: #0b0b0f;
+    --link-hover: #a3a2a2;
+    --link-color: #0b0b0f;
+    --icon-color: #56575a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color)
+}
+
+a:hover{
+    color: var(--link-hover);
+}
+
+i {
+    color: var(--icon-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row; /*coloca o conteúdo em linha e permite a quebra de linha*/
+    justify-content: space-between; /*os itens dentro do container flexivel serão distribuidos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles*/
+    width: 100%;
+    align-items: center;
+    padding: 0.5rem 1rem; /*primeiro valor: top e bottom. segundo valor: left e right.*/
+    z-index: 2s; /*sobreposição*/
+}
+
+body {
+    background: var(--primary-bg-color); /*cor fundo*/
+    color: var(--primary-color);  /*cor geral dos textos*/
+    font-family: "Poppins";
+}
+
+.header-logo .logo {
+    position: relative;
+    width: 6.40rem;
+    height: 1.50rem; 
+    right: 10px;
+}
+
+html[data-theme='dark'] .logo {
+    filter: invert(1); 
+}
+
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+    gap: 1rem;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.menu-mobile {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: .5rem 1rem;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: var(--link-hover);
+}
+
+.menu-icon, .menu-text {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.header-nav {
+    display: none;
+}
+
+.menu-principal {
+    gap: 1rem;
+}
+
+/* MAIN */
+
+.menu-social {
+    gap: 1rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.62rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--secondary-border-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    transition: ease-in-out .3s;
+}
+
+.btn-primary {
+    border: 1px solid var(--secondary-border-color);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
+}
+
+.btn span, .btn i {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.btn-primary span {
+    color: var(--primary-color);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#home, .projetos, .sobre, .contato{
+    padding: 4.10rem 4.10rem;
+
+}
+/*--------------------------------------------------------*/
+
+
+/* CSS RESPONSIVO*/
+@media (min-width: 768px) {
+    .header {
+        position: fixed;
+        border-bottom: 3px solid var(--primary-border-color);
+        padding: 1rem 6rem;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+    }
+}
+
