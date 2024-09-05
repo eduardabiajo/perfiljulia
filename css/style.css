@@ -1,6 +1,6 @@
 /*  Google Fonts */  /* Atalho para Comentar Shift + ALT + A  */
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
 
 
@@ -69,7 +69,12 @@ i {
 body {
     background: var(--primary-bg-color); /*cor fundo*/
     color: var(--primary-color);  /*cor geral dos textos*/
-    font-family: "Poppins";
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
 .header-logo .logo {
@@ -218,8 +223,15 @@ html[data-theme='dark'] .logo {
     flex-direction: column;
     gap: 4rem;
 }
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .card-cover {
-    width: 20%;
+    width: 100%;
     border-radius: 2rem;
     object-fit: cover;
     object-position: center;
@@ -235,7 +247,7 @@ html[data-theme='dark'] .logo {
     font-size: 2rem;
     color: var(--title-color);
     font-weight: 400;
-    font-family: 'Poppins';
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
 }
 .card-description {
     color: var(--primary-color);
@@ -264,11 +276,17 @@ html[data-theme='dark'] .logo {
     height: auto;
 }
 
+.menu-item {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
 /*--------------------------------------------------------*/
 
 
 /* CSS RESPONSIVO*/
 @media (min-width: 768px) {
+
     .header {
         position: fixed;
         border-bottom: 3px solid var(--primary-border-color);
@@ -281,6 +299,57 @@ html[data-theme='dark'] .logo {
 
     .header-nav {
         display: flex;
+    }
+
+    .header-nav, .header-toggle {
+        min-width: 30%;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    #home, .projetos, .sobre, .contato {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contato {
+        padding: 6rem;
+    }
+
+    .contato p {
+        width: 80%;
+    }
+
+    footer {
+        margin: 0;
+    }
+    
+}
+
+@media (min-width: 992px) {
+
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .card-cover {
+        width: 55%;
     }
 }
 
