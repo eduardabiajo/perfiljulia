@@ -12,7 +12,7 @@
     /* bg = background == cor do Fundo */
     --secondary-bg-color: #28292E; /*cor secundária do fundo*/
     --primary-border-color: #28292E;
-    --secondary-border-color: #56575A;
+    --secondary-border-color: #bbbdc2;
     --title-color: #F0F0F0;
     --link-color: #8f8f8f;
     --link-hover: #f0f0f0;
@@ -26,7 +26,7 @@
     --primary-bg-color: #f0f2f5;
     --secondary-bg-color: #c7c8c9;
     --primary-border-color: #c7c8c9;
-    --secondary-border-color:#9a9a9c;
+    --secondary-border-color:#2d2d33;
     --title-color: #0b0b0f;
     --link-hover: #a3a2a2;
     --link-color: #0b0b0f;
@@ -236,6 +236,14 @@ html[data-theme='dark'] .logo {
     object-fit: cover;
     object-position: center;
 }
+
+.card-cover3 {
+    width: 28%;
+    border-radius: 2rem;
+    object-fit: cover;
+    object-position: center;
+}
+
 .card-body {
     display: flex;
     flex-direction: column;
