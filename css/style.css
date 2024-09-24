@@ -64,6 +64,7 @@ i {
     align-items: center;
     padding: 0.5rem 1rem; /*primeiro valor: top e bottom. segundo valor: left e right.*/
     z-index: 2s; /*sobreposição*/
+    background: var(--primary-bg-color);
 }
 
 body {
@@ -365,6 +366,51 @@ html[data-theme='dark'] .logo {
     align-items: flex-start;
     gap: 1rem;
     border: 1px solid var(--primary-border-color);
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-color);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* ROTACIONAR ICONE */
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-top: 3px solid var(--primary-border-color);
+    border-bottom: 3px solid var(--secondary-border-color);
+}
+
+.contato p {
+    text-align: center;
+}
+
+.contato .btn {
+    width: auto;
+}
+
+.contato .email {
+    text-transform: uppercase;
+}
+
+footer {
+    margin-bottom: 5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 /*--------------------------------------------------------*/
